@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded",
 fetch('https://api.nasa.gov/planetary/apod?api_key=0W0Ybkyzkgr6oRmWjAGOutce5y5DQR5tA9rHrjrN')
 .then(Response => Response.json())
 .then(aste => {console.log(aste);
-    document.querySelector('.name').innerText= ("Название: ") +aste.title;
+    document.querySelector('.name').innerText=("Название: ") +aste.title;
     
     document.querySelector('.asteroid').innerText=("Дата обьявления: ") + aste.date;
     
-        document.querySelector('.avtor').innerText= ("Автор: ") +aste.copyright;
+    document.querySelector('.avtor').innerText=("Автор: ") +aste.copyright;
     
-    document.querySelector('.text').innerText= ("Мысль: ") +aste.explanation;
+    document.querySelector('.text').innerText=("Мысль: ") +aste.explanation;
 
-    document.getElementById('photo').src=aste.hdurl;
+    document.getElementById('photo').src= aste.hdurl;
 })
 
 .catch(error => console.log(error));
