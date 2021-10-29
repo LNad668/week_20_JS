@@ -15,7 +15,7 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=0W0Ybkyzkgr6oRmWjAGOutce5y5DQ
     
     document.querySelector('.text').innerText= ("Мысль: ") +aste.explanation;
 
-    document.getElementById('photo').src= ("Фото " ) +aste.hdurl;
+    document.getElementById('photo').src=aste.hdurl;
 })
 
 .catch(error => console.log(error));
