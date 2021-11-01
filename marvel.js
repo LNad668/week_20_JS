@@ -1,22 +1,52 @@
 const heros = [
 {
-    name: 'супермэн',
-    universe: 'DC Comics'
+    name: 'Супермэн',
+    universe: 'DC Comics',
+    frend: 'собака Крипто',
+    photo: '',
+    rating: true
 },{
-    name: 'cупер женщина',
-    universe: 'DC Comics'
+    name: 'Дэдпул',
+    universe: 'Marvel Comics',
+    frend: 'частично Мстители, Человек-паук, Росомаха',
+    photo: '',
+    rating: false
 },{
-    name: 'железный человек',
-    universe: 'Marvel Comics'
+    name: 'Железный человек',
+    universe: 'Marvel Comics',
+    frend: 'Мстители',
+    photo: '',
+    rating: false
 }
 ];
 
 let result = "";
 
 for (hero of heros){
-    result +=
-    '<div class="hero_name: ">' + hero.name + '</div>' +
-    '<div class="hero_universe: ">' + hero.universe + '</div>';
+    result += 
+    
+    '<div class="hero_name">'+ 'Герой: ' + hero.name + '</div>' +
+    '<div class="hero_universe">' + 'Вселенная: ' + hero.universe + '</div>'+ 
+    '<div class="hero_frend">' + 'Друзья: ' + hero.frend + '</div>'+ 
+    '<div class="hero_photo">' + '' + hero.photo + '</div>'+ 
+        '<p>Поставти пожалуйста рейтинг</p>'+
+        '<div>'+
+            '<input type="radio" name="rating" value="'+ 
+            hero.rating + '">'+ 
+            '<label>Не нравиться герой</label>'+
+
+            '<input type="radio" name="rating" value="">'+
+            '<label>Нормальный</label>'+
+
+            '<input type="radio" name="rating" value="" >'+
+            '<label">Любимый герой</label>'+
+            '<br>'+        
+            '<button type="submit">Проголосовать</button>'+
+        '</div>'+
+    
+
+    '<br>'
+    
 }
 
 document.getElementById('marvel').innerHTML = result;
