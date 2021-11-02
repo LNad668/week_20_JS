@@ -55,11 +55,13 @@ for (hero of heros){
             '<br>'+        
             '<button type="submit">Проголосовать</button>'+
         '</div>'+
-
-    '<br>'
-    
+    '<br>' 
 }
 
 document.getElementById('marvel').innerHTML = result;
+// 1. обработчик по клику на радио кнопку
+//2. записать в массив 
+//
 
-    document.querySelectorA('button')
+    document.querySelectorAll('button');
+    
